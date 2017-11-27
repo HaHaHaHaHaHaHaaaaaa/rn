@@ -7,8 +7,12 @@ export default class Mine extends Component {
     state = {
         clicked: 'false',
     }
-  
+    static navigationOptions = {
+        title: '我的',
+      };
+    
     render() {
+        
         const { navigate } = this.props.navigation;
         return (
             <View style={styles.ct}>

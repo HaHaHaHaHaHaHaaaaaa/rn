@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View,StyleSheet } from 'react-native'
 export default class Apps extends Component {
+    static navigationOptions = {
+        title: '应用',
+      };
     render() {
         return (
             <View style={styles.container}>

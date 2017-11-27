@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View,StyleSheet } from 'react-native'
 export default class Focus extends Component {
+    static navigationOptions = {
+        title: '关注',
+      };
     render() {
         return (
             <View style={styles.container}>

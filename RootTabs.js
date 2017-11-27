@@ -94,7 +94,13 @@ const Tabs = TabNavigator({
 
 export default RootTabs = StackNavigator({
     Home: {
-        screen: Tabs
+        screen: Tabs,
+        navigationOptions: {
+            headerStyle: { backgroundColor: '#007AFF', },
+            headerTitleStyle: { alignSelf: 'center', },
+            headerTintColor:'#ffffff',
+            gesturesEnabled: true
+        }
     },
     Details: {
         screen: Details
