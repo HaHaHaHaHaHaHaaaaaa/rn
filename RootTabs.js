@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { View } from 'react-native'
-import { TabNavigator } from 'react-navigation'
+import { TabNavigator, StackNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Home from './src/views/Home/Home'
 import Mine from './src/views/Mine/Mine'
+import Details from './src/views/Mine/Details'
 import Focus from './src/views/Focus/Focus'
 import Apps from './src/views/Apps/Apps'
 
-export default RootTabs = TabNavigator({
+const Tabs = TabNavigator({
     Home: {
         screen: Home,
         navigationOptions: {
@@ -90,3 +91,12 @@ export default RootTabs = TabNavigator({
         scrollEnabled: false,
         swipeEnabled: false,
     })
+
+export default RootTabs = StackNavigator({
+    Home: {
+        screen: Tabs
+    },
+    Details: {
+        screen: Details
+    }
+})
