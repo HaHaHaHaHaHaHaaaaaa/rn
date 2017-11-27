@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Modal, Text, View, Image, StyleSheet, FlatList, TouchableHighlight, TouchableWithoutFeedback, TouchableNativeFeedback,TouchableOpacity, ToastAndroid } from 'react-native'
+import { Modal, Text, View, Image, StyleSheet, FlatList, TouchableHighlight, TouchableWithoutFeedback, TouchableNativeFeedback, TouchableOpacity, ToastAndroid } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import NavBar from './components/NavBar'
+import NavBar from '../components/NavBar'
+
 export default class Mine extends Component {
     state = {
         clicked: 'false',
-       /*  modalVisible: false */
+        /*  modalVisible: false */
     }
     /* setModalVisible(visible) {
         this.setState({ modalVisible: visible });
@@ -14,6 +15,7 @@ export default class Mine extends Component {
         return (
             <View style={styles.ct}>
                 <NavBar title="我的" />
+                
                 {/* <Modal
                     animationType={"slide"}
                     transparent={false}
@@ -39,9 +41,9 @@ export default class Mine extends Component {
                     <Text>Show Modal</Text>
                 </TouchableHighlight> */}
                 <FlatList style={{ marginBottom: 15 }} data={[{ name: '呼和浩特电厂', subname: '王柏林' }]} renderItem={({ item }) =>
-                    <TouchableOpacity >
+                    <TouchableOpacity>
                         <View style={styles.hdrow}>
-                            <Image source={require('../images/person.jpg')} style={{ width: 55, height: 55, borderRadius: 27.5 }} />
+                            <Image source={require('../../images/person.jpg')} style={{ width: 55, height: 55, borderRadius: 27.5 }} />
                             <View style={{ flex: 1, flexDirection: 'column', marginLeft: 8 }}>
                                 <Text style={{ fontSize: 14 }}>{item.subname}</Text>
                                 <Text style={{ fontSize: 12 }}>{item.name}</Text>

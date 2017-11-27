@@ -5,10 +5,10 @@ import {
 import TabNavigator from 'react-native-tab-navigator';
 import Icon from 'react-native-vector-icons/FontAwesome'
 import {Dimensions} from 'react-native'
-import Home from './src/views/Home'
-import Mine from './src/views/Mine'
-import Focus from './src/views/Focus'
-import Apps from './src/views/Apps'
+import Home from './src/views/Home/Home'
+import Mine from './src/views/Mine/Mine'
+import Focus from './src/views/Focus/Focus'
+import Apps from './src/views/Apps/Apps'
 
 const deviceW = Dimensions.get('window').width
 
