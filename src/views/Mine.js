@@ -1,25 +1,55 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet, FlatList, TouchableHighlight, TouchableWithoutFeedback, TouchableNativeFeedback, ToastAndroid } from 'react-native'
+import { Modal, Text, View, Image, StyleSheet, FlatList, TouchableHighlight, TouchableWithoutFeedback, TouchableNativeFeedback,TouchableOpacity, ToastAndroid } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import NavBar from './components/NavBar'
 export default class Mine extends Component {
     state = {
-        clicked: 'false'
+        clicked: 'false',
+       /*  modalVisible: false */
     }
+    /* setModalVisible(visible) {
+        this.setState({ modalVisible: visible });
+    } */
     render() {
         return (
             <View style={styles.ct}>
-                <NavBar title="我的"/>
-                <FlatList style={{marginBottom:15}} data={[{ name: '呼和浩特电厂', subname: '王柏林' }]} renderItem={({ item }) =>
-                    <View style={styles.hdrow}>
-                        <Image source={require('../images/person.jpg')} style={{ width: 55, height: 55, borderRadius: 27.5 }} />
-                        <View style={{ flex: 1, flexDirection: 'column', marginLeft: 8 }}>
-                            <Text style={{ fontSize: 14 }}>{item.subname}</Text>
-                            <Text style={{ fontSize: 12 }}>{item.name}</Text>
+                <NavBar title="我的" />
+                {/* <Modal
+                    animationType={"slide"}
+                    transparent={false}
+                    visible={this.state.modalVisible}
+                    onRequestClose={() => { alert("Modal has been closed.") }}
+                >
+                    <View style={{ marginTop: 22 }}>
+                        <View>
+                            <Text>Hello World!</Text>
+
+                            <TouchableHighlight onPress={() => {
+                                this.setModalVisible(!this.state.modalVisible)
+                            }}>
+                                <Text>Hide Modal</Text>
+                            </TouchableHighlight>
+
                         </View>
-                        <Icon name="angle-right" style={styles.arrow} size={15} color="#666" />
                     </View>
-                } 
+                </Modal>
+                <TouchableHighlight onPress={() => {
+                    this.setModalVisible(true)
+                }}>
+                    <Text>Show Modal</Text>
+                </TouchableHighlight> */}
+                <FlatList style={{ marginBottom: 15 }} data={[{ name: '呼和浩特电厂', subname: '王柏林' }]} renderItem={({ item }) =>
+                    <TouchableOpacity >
+                        <View style={styles.hdrow}>
+                            <Image source={require('../images/person.jpg')} style={{ width: 55, height: 55, borderRadius: 27.5 }} />
+                            <View style={{ flex: 1, flexDirection: 'column', marginLeft: 8 }}>
+                                <Text style={{ fontSize: 14 }}>{item.subname}</Text>
+                                <Text style={{ fontSize: 12 }}>{item.name}</Text>
+                            </View>
+                            <Icon name="angle-right" style={styles.arrow} size={15} color="#666" />
+                        </View>
+                    </TouchableOpacity>
+                }
                 />
                 <FlatList
                     data={[{ key: '电厂信息', icon: 'gitlab', color: '#B331F1' }, { key: '我厂煤种', icon: 'area-chart', color: '#4290F4' }, { key: '应用分享', icon: 'share', color: '#34DE82' }, { key: '设置', icon: 'cog', color: '#F22F12' }]}
