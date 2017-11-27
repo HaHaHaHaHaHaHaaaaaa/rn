@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native'
-import NavBar from '../components/NavBar'
 export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <NavBar title="首页"/>
                 <Text style={styles.welcome}>
                     Home
                 </Text>
