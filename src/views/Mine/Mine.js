@@ -17,7 +17,7 @@ export default class Mine extends Component {
         return (
             <View style={styles.ct}>
                 <FlatList style={{ marginBottom: 15 }} data={[{ name: '呼和浩特电厂', subname: '王柏林' }]} renderItem={({ item }) =>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>navigate('Details',{title:'个人信息'})} >
                         <View style={styles.hdrow}>
                             <Image source={require('../../images/person.jpg')} style={{ width: 55, height: 55, borderRadius: 27.5 }} />
                             <View style={{ flex: 1, flexDirection: 'column', marginLeft: 8 }}>
