@@ -99,7 +99,8 @@ export default RootTabs = StackNavigator({
             headerStyle: { backgroundColor: '#007AFF', },
             headerTitleStyle: { alignSelf: 'center', },
             headerTintColor:'#ffffff',
-            gesturesEnabled: true
+            gesturesEnabled: true,
+            mode:'card'
         }
     },
     Details: {
