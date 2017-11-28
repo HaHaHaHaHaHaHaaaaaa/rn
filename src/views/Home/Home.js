@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, WebView } from 'react-native'
+
+
 export default class Home extends Component {
     static navigationOptions = {
         title: '首页',
-      };
+    };
     render() {
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
                     Home
                 </Text>
+                
             </View>
+
         )
     }
 }

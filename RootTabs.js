@@ -84,7 +84,7 @@ const Tabs = TabNavigator({
             },
             tabStyle: {
                 /*  marginTop:10, */
-                height: 50
+                height: 49
             }
         },
         backBehavior: 'none', // 按 back 键是否跳转到第一个Tab(首页)， none 为不跳转 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {View,Text} from 'react-native';
-
 export default class Details extends Component {
     static navigationOptions = {
         title:'个人信息',
