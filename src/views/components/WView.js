@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, WebView ,ToastAndroid} from 'react-native'
-const DEFAULT_URL = "https://www.baidu.com"
+import { View, StyleSheet, WebView, ToastAndroid } from 'react-native'
+const DEFAULT_URL = "https://www.hao123.com"
 export default class WView extends Component {
     render() {
         return (
@@ -13,19 +13,17 @@ export default class WView extends Component {
                     scalesPageToFit ={false}
                     style={styles.webview_style}
                     onLoad={()=>ToastAndroid.show('success',1000)}
-                    renderError ={()=>alert('err')}
+                    renderError ={()=>alert('webview load failed')}
                 />
             </View>
         )
     }
-} 
+}
 const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
     webview_style: {
-        width: 100 + '%',
-        height: 450,
-        backgroundColor: 'red'
+        backgroundColor: 'blue'
     }
 })

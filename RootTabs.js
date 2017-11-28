@@ -97,7 +97,7 @@ export default RootTabs = StackNavigator({
         screen: Tabs,
         navigationOptions: {
             headerStyle: { backgroundColor: '#007AFF', },
-            headerTitleStyle: { alignSelf: 'center', },
+            headerTitleStyle: { alignSelf: 'center',fontSize:14 },
             headerTintColor:'#ffffff',
             gesturesEnabled: true,
             mode:'card'

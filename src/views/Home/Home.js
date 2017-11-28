@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, WebView } from 'react-native'
-
+import WView from '../components/WView'
 
 export default class Home extends Component {
     static navigationOptions = {
@@ -9,10 +9,7 @@ export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Home
-                </Text>
-                
+                <WView/>
             </View>
 
         )
