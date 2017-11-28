@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, WebView, ToastAndroid } from 'react-native'
-const DEFAULT_URL = "https://www.hao123.com"
+
 export default class WView extends Component {
+    static navigationOptions =({navigation})=>({
+        title:navigation.state.params.title,
+        headerStyle: { backgroundColor: '#007AFF', },
+        headerTitleStyle: { alignSelf: 'center', },
+        headerTintColor:'#ffffff',
+        gesturesEnabled: true,
+        headerRight: (
+            <View style={{height: 44,width: 55,justifyContent: 'center',paddingRight:15} }/>
+        ),
+    })
     render() {
+        const des_url=this.props.des_url||this.props.navigation.state.params.des_url
         return (
             <View style={styles.container}>
                 <WebView
-                    source={{ uri: DEFAULT_URL }}//新版本中的写法
+                    source={{ uri: des_url }}//新版本中的写法
                     startInLoadingState={true}
                     domStorageEnabled={true}//开启dom存
                     javaScriptEnabled={true}//开启js

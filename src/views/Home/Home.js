@@ -6,11 +6,14 @@ export default class Home extends Component {
     static navigationOptions = {
         title: '首页',
     };
+    state={
+        def_url:"http://www.hao123.com"
+    }
     render() {
         return (
             <View style={styles.container}>
-                <WView/>
-            </View>
+                <WView des_url={this.state.def_url}/>
+            </View> 
 
         )
     }

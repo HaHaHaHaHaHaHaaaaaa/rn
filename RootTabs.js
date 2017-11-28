@@ -7,7 +7,7 @@ import Mine from './src/views/Mine/Mine'
 import Details from './src/views/Mine/Details'
 import Focus from './src/views/Focus/Focus'
 import Apps from './src/views/Apps/Apps'
-
+import WView from './src/views/components/WView'
 const Tabs = TabNavigator({
     Home: {
         screen: Home,
@@ -105,5 +105,8 @@ export default RootTabs = StackNavigator({
     },
     Details: {
         screen: Details
+    },
+    WebSite:{
+        screen:WView
     }
 })
