@@ -5,7 +5,7 @@ export default class WView extends Component {
     static navigationOptions =({navigation})=>({
         title:navigation.state.params.title,
         headerStyle: { backgroundColor: '#007AFF', },
-        headerTitleStyle: { alignSelf: 'center', },
+        headerTitleStyle: { alignSelf: 'center',fontSize:14 },
         headerTintColor:'#ffffff',
         gesturesEnabled: true,
         headerRight: (
@@ -13,6 +13,7 @@ export default class WView extends Component {
         ),
     })
     render() {
+          {/* onLoad={()=>ToastAndroid.show('success',1000)} */}
         const des_url=this.props.des_url||this.props.navigation.state.params.des_url
         return (
             <View style={styles.container}>
@@ -23,7 +24,6 @@ export default class WView extends Component {
                     javaScriptEnabled={true}//开启js
                     scalesPageToFit ={false}
                     style={styles.webview_style}
-                    onLoad={()=>ToastAndroid.show('success',1000)}
                     renderError ={()=>alert('webview load failed')}
                 />
             </View>
@@ -35,6 +35,6 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     webview_style: {
-        backgroundColor: 'blue'
+        backgroundColor: '#FFFFFF'
     }
 })

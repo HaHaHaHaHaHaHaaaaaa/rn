@@ -4,7 +4,7 @@ export default class Details extends Component {
     static navigationOptions = {
         title:'个人信息',
         headerStyle: { backgroundColor: '#007AFF', },
-        headerTitleStyle: { alignSelf: 'center', },
+        headerTitleStyle: { alignSelf: 'center',fontSize:14 },
         headerTintColor:'#ffffff',
         gesturesEnabled: true,
         headerRight: (
