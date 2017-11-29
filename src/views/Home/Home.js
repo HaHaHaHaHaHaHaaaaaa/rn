@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, WebView } from 'react-native'
+import { Text, View, StyleSheet, WebView} from 'react-native'
 import WView from '../components/WView'
 
 export default class Home extends Component {
@@ -9,6 +9,7 @@ export default class Home extends Component {
     state={
         def_url:"http://www.hao123.com"
     }
+    
     render() {
         return (
             <View style={styles.container}>
