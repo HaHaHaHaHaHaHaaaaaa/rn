@@ -10,7 +10,7 @@ export default class Mine extends Component {
     static navigationOptions = {
         title: '我的',
     };
-
+    
     render() {
 
         const { navigate } = this.props.navigation;
