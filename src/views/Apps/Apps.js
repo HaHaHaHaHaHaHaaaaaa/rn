@@ -11,12 +11,12 @@ export default class Apps extends Component {
         token:' ',
     }
     componentWillMount(){
-        Axios.post(Login_url, { 'username': 'admin', 'pwd': '8888', 'autoLogin': false }).then(rs => {
+       /*  Axios.post(Login_url, { 'username': 'admin', 'pwd': '8888', 'autoLogin': false }).then(rs => {
             let token = rs.data.d.items[0].token;
             this.setState(pre=>{
                 return {token:token}
             })
-          })
+          }) */
     }
     render() {
         const { navigate } = this.props.navigation;

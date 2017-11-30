@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { View } from 'react-native'
 import { TabNavigator, StackNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -90,6 +90,8 @@ const Tabs = TabNavigator({
         backBehavior: 'none', // 按 back 键是否跳转到第一个Tab(首页)， none 为不跳转 
         scrollEnabled: false,
         swipeEnabled: false,
+        headerMode: 'screen',
+
     })
 
 export default RootTabs = StackNavigator({
@@ -97,16 +99,17 @@ export default RootTabs = StackNavigator({
         screen: Tabs,
         navigationOptions: {
             headerStyle: { backgroundColor: '#007AFF', },
-            headerTitleStyle: { alignSelf: 'center',fontSize:14 },
-            headerTintColor:'#ffffff',
+            headerTitleStyle: { alignSelf: 'center', fontSize: 14 },
+            headerTintColor: '#ffffff',
             gesturesEnabled: true,
-            mode:'card'
+            mode: 'card'
         }
     },
     Details: {
         screen: Details
     },
-    WebSite:{
-        screen:WView
+    WebSite: {
+        screen: WView
     }
 })
+

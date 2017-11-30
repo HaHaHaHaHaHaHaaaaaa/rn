@@ -1,23 +1,60 @@
 import React, { Component } from 'react';
-import {View,Text} from 'react-native';
-export default class Details extends Component {
+import { View, Text, Button, StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
+import { doLogin } from '../redux/actions/Login'
+import Focus from '../Focus/Focus'
+/* import configureStore from '../redux/store/ConfigureStore'
+const store=configureStore() */
+class Details extends Component {
+    shouldComponentUpdate(nextProps, nextState) {
+        const { navigate } = this.props.navigation;
+        // 登录完成，且成功登录
+        if (nextProps.status === 'done' && nextProps.isSuccess) {
+            alert(nextProps.user.name)
+            return false;
+        }
+        return true;
+    }
     static navigationOptions = {
-        title:'个人信息',
+        title: '个人信息',
         headerStyle: { backgroundColor: '#007AFF', },
-        headerTitleStyle: { alignSelf: 'center',fontSize:14 },
-        headerTintColor:'#ffffff',
+        headerTitleStyle: { alignSelf: 'center', fontSize: 14 },
+        headerTintColor: '#ffffff',
         gesturesEnabled: true,
         headerRight: (
-            <View style={{height: 44,width: 55,justifyContent: 'center',paddingRight:15} }/>
+            <View style={{ height: 44, width: 55, justifyContent: 'center', paddingRight: 15 }} />
         ),
     }
-           
+
+
+
     render() {
-        
+
         return (
             <View>
                 <Text>{this.props.navigation.state.params.title}详情页面</Text>
+                <Button title="login" onPress={this.handleLogin.bind(this)} />
             </View>
         )
     }
+
+    handleLogin() {
+        this.props.dispatch(doLogin());
+    }
 }
+
+function select(store) {
+    return {
+        status: store.loginIn.status,
+        isSuccess: store.loginIn.isSuccess,
+        user: store.loginIn.user
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+});
+
+export default connect(select)(Details);
