@@ -6,6 +6,7 @@ import Focus from '../Focus/Focus'
 /* import configureStore from '../redux/store/ConfigureStore'
 const store=configureStore() */
 class Details extends Component {
+    
     shouldComponentUpdate(nextProps, nextState) {
         const { navigate } = this.props.navigation;
         // 登录完成，且成功登录
@@ -29,7 +30,6 @@ class Details extends Component {
 
 
     render() {
-
         return (
             <View>
                 <Text>{this.props.navigation.state.params.title}详情页面</Text>

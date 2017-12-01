@@ -12,7 +12,6 @@ export default class Mine extends Component {
     };
     
     render() {
-
         const { navigate } = this.props.navigation;
         return (
             <View style={styles.ct}>
