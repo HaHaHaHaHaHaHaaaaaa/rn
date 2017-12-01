@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { doLogin } from '../redux/actions/Login'
-import Focus from '../Focus/Focus'
-/* import configureStore from '../redux/store/ConfigureStore'
-const store=configureStore() */
+
 class Details extends Component {
     
     shouldComponentUpdate(nextProps, nextState) {
