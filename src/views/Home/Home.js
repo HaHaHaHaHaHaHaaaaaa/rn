@@ -7,7 +7,7 @@ export default class Home extends Component {
         title: '首页',
     };
     state={
-        def_url:"http://www.hao123.com"
+        def_url:"http://www.baidu.com"
     }
     
     render() {

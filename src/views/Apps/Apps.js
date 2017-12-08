@@ -52,23 +52,26 @@ export default class Apps extends Component {
 }
 const styles = StyleSheet.create({
     container: {
-        /*  flex: 1, */
         backgroundColor: '#F5FCFF',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent:'center'
     },
     items: {
         padding: 10,
-        /* flex: 1,  */
-        flexDirection: 'row', alignItems: 'center',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'space-around',
+        width:100+'%',
     },
     innerItems: {
         backgroundColor: '#31BFD0',
-        margin: 10,
-        borderRadius: 10
+        /* margin: 10, */
+        borderRadius: 5,
+        opacity:0.7
     },
     wz: {
         fontSize: 20,
+        color:'#ffffff',
         margin: 20,
     }
 });

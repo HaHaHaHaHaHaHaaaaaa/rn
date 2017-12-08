@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     },
     arrow: {
         position: 'absolute',
-        right: 5,
+        right: 10,
     },
     container: {
         flex: 1,

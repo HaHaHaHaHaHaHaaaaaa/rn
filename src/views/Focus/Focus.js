@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, FlatList, Image } from 'react-native'
 import { connect } from 'react-redux';
+import ScreenUtil from '../../utils/ScreenUtil'
 
 import {isRefresh,doneRefresh} from '../redux/actions/Refresh'
 import configureStore from '../redux/store/ConfigureStore'
