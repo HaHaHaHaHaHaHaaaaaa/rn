@@ -109,9 +109,29 @@ export default RootTabs = StackNavigator({
         }
     },
     Details: {
+        navigationOptions:{
+            headerStyle: { backgroundColor: '#007AFF', },
+            headerTitleStyle: { alignSelf: 'center', fontSize: 14 ,textAlign:'center',width:'100%'},
+            headerRight: (
+                <View style={{height: 44,width: 55,justifyContent: 'center',paddingRight:15} }/>
+            ),
+            headerTintColor: '#ffffff',
+            gesturesEnabled: true,
+            mode: 'card'
+        },
         screen: Details
     },
     WebSite: {
+        navigationOptions:{
+            headerStyle: { backgroundColor: '#007AFF', },
+            headerTitleStyle: { alignSelf: 'center', fontSize: 14 ,textAlign:'center',width:'100%'},
+            headerRight: (
+                <View style={{height: 44,width: 55,justifyContent: 'center',paddingRight:15} }/>
+            ),
+            headerTintColor: '#ffffff',
+            gesturesEnabled: true,
+            mode: 'card'
+        },
         screen: WView
     }
 })
