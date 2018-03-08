@@ -90,7 +90,7 @@ const Tabs = TabNavigator({
         backBehavior: 'none', // 按 back 键是否跳转到第一个Tab(首页)， none 为不跳转 
         scrollEnabled: false,
         swipeEnabled: false,
-        headerMode: 'screen',
+        headerMode: 'card',
 
     })
 
@@ -112,9 +112,9 @@ export default RootTabs = StackNavigator({
         navigationOptions:{
             headerStyle: { backgroundColor: '#007AFF', },
             headerTitleStyle: { alignSelf: 'center', fontSize: 14 ,textAlign:'center',width:'100%'},
-            headerRight: (
+            /* headerRight: (
                 <View style={{height: 44,width: 55,justifyContent: 'center',paddingRight:15} }/>
-            ),
+            ), */
             headerTintColor: '#ffffff',
             gesturesEnabled: true,
             mode: 'card'
