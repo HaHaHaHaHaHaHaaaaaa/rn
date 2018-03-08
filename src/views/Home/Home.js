@@ -5,6 +5,10 @@ import WView from '../components/WView'
 export default class Home extends Component {
     static navigationOptions = {
         title: '首页',
+        /* headerTitleStyle: { alignSelf: 'center',fontSize:14 },
+        headerRight: (
+            <View style={{height: 44,width: 55,justifyContent: 'center',paddingRight:15} }/>
+        ), */
     };
     state={
         def_url:"http://www.baidu.com"

@@ -6,6 +6,10 @@ const Login_url = domain + "/Handler/UserControl.asmx/Login"
 export default class Apps extends Component {
     static navigationOptions = {
         title: '应用',
+        /* headerTitleStyle: { alignSelf: 'center',fontSize:14 },
+        headerRight: (
+            <View style={{height: 44,width: 55,justifyContent: 'center',paddingRight:15} }/>
+        ), */
     };
     state = {
         token: ' ',

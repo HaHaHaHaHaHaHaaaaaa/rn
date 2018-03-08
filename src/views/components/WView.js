@@ -4,7 +4,7 @@ import { View, StyleSheet, WebView, ToastAndroid } from 'react-native'
 export default class WView extends Component {
     static navigationOptions =({navigation})=>({
         title:navigation.state.params.title,
-        headerStyle: { backgroundColor: '#007AFF', },
+        headerStyle: { backgroundColor: '#007AFF',},
         headerTitleStyle: { alignSelf: 'center',fontSize:14 },
         headerTintColor:'#ffffff',
         gesturesEnabled: true,
