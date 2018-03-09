@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, AsyncStorage } from 'react-native'
 import Axios from 'axios'
-const domain = "http://www.baidu.com";
+const domain = "http://123.57.151.33:9999";
 const Login_url = domain + "/Handler/UserControl.asmx/Login"
 export default class Apps extends Component {
     static navigationOptions = {
@@ -28,37 +28,40 @@ export default class Apps extends Component {
             <View style={styles.container}>
                 <View style={styles.items}>
                     <TouchableOpacity onPress={() =>
-                        navigate('WebSite', { des_url: 'http://www.baidu.com/h5/#/mine-general/' + this.state.token, title: '煤场概况' })
+                        navigate('WebSite', { des_url: 'http://11111111111111111111111#/mine-general/%20' + this.state.token, title: '煤场概况' })
                     }>
                         <View style={styles.innerItems}><Text style={styles.wz}>煤场概况</Text></View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() =>
-                        navigate('WebSite', { des_url: 'http://www.baidu.com/h5/#/mixburning-general/' + this.state.token, title: '掺烧概况' })
+                        navigate('WebSite', { des_url: 'http://11111111111111111111111#/mixburning-general/%20' + this.state.token, title: '掺烧概况' })
                     }>
                         <View style={styles.innerItems}><Text style={styles.wz}>掺烧概况</Text></View>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.items}>
                     <TouchableOpacity onPress={() =>
-                        navigate('WebSite', { des_url: 'http://www.baidu.com/h5/#/plantInfo/' + this.state.token, title: '电厂信息' })
+                        navigate('WebSite', { des_url: 'http://11111111111111111111111#/plantInfo/%20' + this.state.token, title: '电厂信息' })
                     }>
                         <View style={styles.innerItems}><Text style={styles.wz}>电厂信息</Text></View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() =>
-                        navigate('WebSite', { des_url: 'http://www.baidu.com/h5/#/operation-figure/' + this.state.token, title: '运行指标' })
+                        navigate('WebSite', { des_url: 'http://11111111111111111111111#/operation-figure/%20' + this.state.token, title: '运行指标' })
                     }>
                         <View style={styles.innerItems} ><Text style={styles.wz}>运行指标</Text></View>
                     </TouchableOpacity>
                 </View>
             </View>
-        )
+        ) 
     }
 }
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#F5FCFF',
         alignItems: 'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        /* width:100+'%',
+        height:100+'%', */
+        margin:8
     },
     items: {
         padding: 10,
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
         width:100+'%',
     },
     innerItems: {
-        backgroundColor: '#31BFD0',
+        backgroundColor: '#1571FA',
         /* margin: 10, */
         borderRadius: 5,
         opacity:0.7
